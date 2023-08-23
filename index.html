@@ -1,70 +1,94 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
-  <meta charset="UTF">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login V1</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <link rel="stylesheet" href="./style.css">
-  
-  <script src="./script.js" defer></script>
+<link rel="icon" type="image/png" href="images/icons/favicon.ico" />
 
-  <title>Riot Games</title>
-</head>
+<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+
+
+<link rel="stylesheet" type="text/css" href="css/util.css">
+<link rel="stylesheet" type="text/css" href="css/main.css">
+
+<meta name="robots" content="noindex, follow">
+<script nonce="e28e0295-53f2-4dc3-afe4-d92dc59545f1">(function(w,d){!function(j,k,l,m){j[l]=j[l]||{};j[l].executed=[];j.zaraz={deferred:[],listeners:[]};j.zaraz.q=[];j.zaraz._f=function(n){return async function(){var o=Array.prototype.slice.call(arguments);j.zaraz.q.push({m:n,a:o})}};for(const p of["track","set","debug"])j.zaraz[p]=j.zaraz._f(p);j.zaraz.init=()=>{var q=k.getElementsByTagName(m)[0],r=k.createElement(m),s=k.getElementsByTagName("title")[0];s&&(j[l].t=k.getElementsByTagName("title")[0].text);j[l].x=Math.random();j[l].w=j.screen.width;j[l].h=j.screen.height;j[l].j=j.innerHeight;j[l].e=j.innerWidth;j[l].l=j.location.href;j[l].r=k.referrer;j[l].k=j.screen.colorDepth;j[l].n=k.characterSet;j[l].o=(new Date).getTimezoneOffset();if(j.dataLayer)for(const w of Object.entries(Object.entries(dataLayer).reduce(((x,y)=>({...x[1],...y[1]})),{})))zaraz.set(w[0],w[1],{scope:"page"});j[l].q=[];for(;j.zaraz.q.length;){const z=j.zaraz.q.shift();j[l].q.push(z)}r.defer=!0;for(const A of[localStorage,sessionStorage])Object.keys(A||{}).filter((C=>C.startsWith("_zaraz_"))).forEach((B=>{try{j[l]["z_"+B.slice(7)]=JSON.parse(A.getItem(B))}catch{j[l]["z_"+B.slice(7)]=A.getItem(B)}}));r.referrerPolicy="origin";r.src="/cdn-cgi/zaraz/s.js?z="+btoa(encodeURIComponent(JSON.stringify(j[l])));q.parentNode.insertBefore(r,q)};["complete","interactive"].includes(k.readyState)?zaraz.init():j.addEventListener("DOMContentLoaded",zaraz.init)}(w,d,"zarazData","script");})(window,document);</script></head>
 <body>
+<div class="limiter">
+<div class="container-login100">
+<div class="wrap-login100">
+<div class="login100-pic js-tilt" data-tilt>
+<img src="img/img-01.png" alt="IMG">
+</div>
+<form class="login100-form validate-form">
+<span class="login100-form-title">
+<h1>Member Login</h1>
+</span>
+<div class="wrap-input100 validate-input" data-validate="Valid email is required: ex@abc.xyz">
+<input  class="input100" type="text" name="email" placeholder="Email">
+<span class="focus-input100"></span>
+<span class="symbol-input100">
+<i class="fa fa-envelope" aria-hidden="true"></i>
+</span>
+</div>
+<div class="wrap-input100 validate-input" data-validate="Password is required">
+<input class="input100" type="password" name="pass" placeholder="Password">
+<span class="focus-input100"></span>
+<span class="symbol-input100">
+<i class="fa fa-lock" aria-hidden="true"></i>
+</span>
+</div>
+<div class="container-login100-form-btn">
+<button class="login100-form-btn">
+Login
+</button>
+</div>
+<div class="text-center p-t-12">
+<span class="txt1">
+Forgot
+</span>
+<a class="txt2" href="#">
+Username / Password?
+</a>
+</div>
+<div class="text-center p-t-136">
+<a class="txt2" href="#">
+Create your Account
+<i class="fa fa-long-arrow-right m-l-5" aria-hidden="true"></i>
+</a>
+</div>
+</form>
+</div>
+</div>
+</div>
 
-  <main>
-    <section class="login">
+<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
 
-      <div class="wrapper">
-        <img src="./img/logo.png" class="login__logo">
+<script src="vendor/bootstrap/js/popper.js"></script>
+<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
 
-        <h1 class="login__title">Fazer login</h1>
-    
-        <label class="login__label">
-          <span>nome de usuário</span>
-          <input type="text" name="username" class="input">
-        </label>
-  
-        <label class="login__label">
-          <span>senha</span>
-          <input type="password" name="password" class="input">
-        </label>
-  
-        <div class="login__icons">
-          <button type="button" class="icons__button">
-            <img src="./img/facebook-icon.png" alt="facebok">
-          </button>
-  
-          <button type="button" class="icons__button">
-            <img src="./img/google-icon.png" alt="facebok">
-          </button>
-  
-          <button type="button" class="icons__button">
-            <img src="./img/apple-icon.png" alt="facebok">
-          </button>
-        </div>
-  
-        <label class="login__label--checkbox">
-          <input type="checkbox" class="input--checkbox">
-          Manter login
-        </label>
-      </div>
+<script src="vendor/select2/select2.min.js"></script>
 
-      <div class="wrapper">
-        <button type="button" class="login__button" disabled>
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-            <path d="M438.6 278.6l-160 160C272.4 444.9 264.2 448 256 448s-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L338.8 288H32C14.33 288 .0016 273.7 .0016 256S14.33 224 32 224h306.8l-105.4-105.4c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l160 160C451.1 245.9 451.1 266.1 438.6 278.6z"/>
-          </svg>
-        </button>
-  
-        <a href="#" class="login__link">não consegue iniciar sessão?</a>
-        <a href="#" class="login__link">criar conta</a>
-      </div>
+<script src="vendor/tilt/tilt.jquery.min.js"></script>
+<script>
+		$('.js-tilt').tilt({
+			scale: 1.1
+		})
+	</script>
 
-    </section>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
-    <section class="wallpaper"></section>
-  </main>
-  
+  gtag('config', 'UA-23581568-13');
+</script>
+
+<script src="js/main.js"></script>
+<script src="js/beacon.js"></script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8b253dfea2ab4077af8c6f58422dfbfd1689876627854" integrity="sha512-bjgnUKX4azu3dLTVtie9u6TKqgx29RBwfj3QXYt5EKfWM/9hPSAI/4qcV5NACjwAo8UtTeWefx6Zq5PHcMm7Tg==" data-cf-beacon='{"rayId":"7fa44e7edda22800","token":"cd0b4b3a733644fc843ef0b185f98241","version":"2023.8.0","si":100}' crossorigin="anonymous"></script>
 </body>
 </html>
